@@ -8,7 +8,7 @@ import requests,json,schedule,time
 #start = time.process_time()
 
 token = telegram_token
-id = "5241722694"
+id = telegram_id
  
 bot = telegram.Bot(token)
 url = 'https://front.wemakeprice.com/api/wmpsuggest/hotkeyword/all.json'
@@ -22,10 +22,9 @@ res = requests.get(url, headers=headers)
 main_data=res.json()
 
 before = list(map(lambda x: (x['rank'],x['keyword']),main_data['hits']))
-after = np.concatenate(before).tolist()
-print(type(before))
+
 # def king() :
-#bot.sendMessage(chat_id=id, text=before[0])
+bot.sendMessage(chat_id=id, text=before)
 
 # #end = time.process_time() -- 실행속도
 
