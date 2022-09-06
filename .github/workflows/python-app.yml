@@ -4,8 +4,10 @@
 name: Python application
 
 on:
-  schedule:
-    - cron: '*/5 * * * *' # Every 5 minutes
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 permissions:
   contents: read
