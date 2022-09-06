@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install python-telegram-bot requests urllib3
+        pip install python-telegram-bot requests  git+https://github.com/wallento/wavedrompy.git@05b1220f870ae513b7a4d4dc73ca4741c66a6c08
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: run
