@@ -34,3 +34,4 @@ jobs:
         python wemake.py 
       env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_ID : ${{ secrets.TELEGRAM_ID }} 
