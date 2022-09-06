@@ -22,8 +22,8 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.8"
-        telegram_token : ${{ secrets.TELEGRAM_TOKEN }}
-        telegram_id : ${{ secrets.TEGERAM_ID }}
+        telegram_token : "${{ secrets.TELEGRAM_TOKEN }}"
+        telegram_id : "${{ secrets.TEGERAM_ID }}"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
