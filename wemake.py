@@ -1,6 +1,6 @@
 import requests
 import json,telegram,schedule,time
-
+from collections.abc import Mapping, Sequence
 token = '5642908629:AAHBCZDc_IvIbt7UoOXupehtBfi-yDil5Ko'
 id = "5241722694"
  
