@@ -2,13 +2,16 @@ import time
 import telegram
 import unicodedata
 import numpy as np
+import os
+from github import Github
+
 
 #from datetime import timedelta
 import requests,json,schedule,time
 #start = time.process_time()
 
-token = telegram_token
-id = telegram_id
+token = os.environ["telegram_token"]
+id = os.environ["telegram_id"]
  
 bot = telegram.Bot(token)
 url = 'https://front.wemakeprice.com/api/wmpsuggest/hotkeyword/all.json'
