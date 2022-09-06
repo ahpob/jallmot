@@ -2,7 +2,7 @@ import requests,os
 import json,telegram,schedule,time
 
 token = os.environ['TELEGRAM_TOKEN']
-id = "5241722694"
+id = os.environ['telegram_id']
  
 bot = telegram.Bot(token)
 url = 'https://front.wemakeprice.com/api/wmpsuggest/hotkeyword/all.json'
