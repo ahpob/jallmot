@@ -17,15 +17,15 @@ main_data=res.json()
 
 before = list(map(lambda x: (x['rank'],x['keyword']),main_data['hits']))
 
-# def king() :
-bot.sendMessage(chat_id=id, text=before)
+def king() :
+    bot.sendMessage(chat_id=id, text=before)
 
 
-# schedule.every(1).seconds.do(king)
+schedule.every(5).seconds.do(king)
     
-# # # step4.스캐쥴 시작
-# while True:
-#    schedule.run_pending()
-#    time.sleep(1)
+# # step4.스캐쥴 시작
+while True:
+   schedule.run_pending()
+   time.sleep(1)
 # #print("Time elapsed: ", end - start)  # seconds  #-- 실행속도
 # #print("Time elapsed: ", timedelta(seconds=end-start))  #-- 실행속도
