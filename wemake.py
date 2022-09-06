@@ -1,7 +1,7 @@
 import requests
 import json,telegram,schedule,time
 
-token = {{ secrets.TELEGRAM_TOKEN }}
+token = TELEGRAM_TOKEN
 id = "5241722694"
  
 bot = telegram.Bot(token)
