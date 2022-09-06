@@ -31,4 +31,6 @@ jobs:
     
     - name: run
       run: |
-        python wemake.py ${{ secrets.TELEGRAM_TOKEN }}
+        python wemake.py 
+      env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
