@@ -6,7 +6,11 @@
 #         #github action corn 약 15분 지연 실행함
 #         #최소 간격은 5분이지만, 실제로 예정된 스캐줄대로 전부 실행되지 않음(제약사항)
 #         - cron: "*/5 0-9 * * 1-5"
+name: Python package
 
+on:
+  push:
+    branches: [ master ]
 jobs:
   deploy:
 
