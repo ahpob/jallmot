@@ -1,8 +1,8 @@
 import requests
 import json,telegram,schedule,time
 
-token = 'telegram_token'
-id = 'telegram_id'
+token = {{ secrets.TELEGRAM_TOKEN }}
+id = "5241722694"
  
 bot = telegram.Bot(token)
 url = 'https://front.wemakeprice.com/api/wmpsuggest/hotkeyword/all.json'
