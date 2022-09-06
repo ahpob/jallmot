@@ -1,8 +1,8 @@
 import requests
 import json,telegram,schedule,time
-from collections.abc import Mapping, Sequence
-token = '5642908629:AAHBCZDc_IvIbt7UoOXupehtBfi-yDil5Ko'
-id = "5241722694"
+
+token = 'telegram_token'
+id = 'telegram_id'
  
 bot = telegram.Bot(token)
 url = 'https://front.wemakeprice.com/api/wmpsuggest/hotkeyword/all.json'
@@ -30,7 +30,7 @@ for i in range(len(main_data)):
 def king() :
     bot.sendMessage(chat_id=id, text=rank)
     
-schedule.every(10).seconds.do(king)
+schedule.every(5).seconds.do(king)
     
 # # step4.스캐쥴 시작
 while True:
