@@ -18,14 +18,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.8
+    - name: Set up Python 3.9
       uses: actions/setup-python@v3
       with:
         python-version: "3.8"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install python-telegram-bot requests  git+https://github.com/wallento/wavedrompy.git@05b1220f870ae513b7a4d4dc73ca4741c66a6c08
+        pip install python-telegram-bot requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: run
