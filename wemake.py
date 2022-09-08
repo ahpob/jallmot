@@ -1,10 +1,16 @@
 import requests,os
-import json,telegram,schedule,time
+import json,schedule,time
 
-token = os.environ['TELEGRAM_TOKEN']
-id = os.environ['TELEGRAM_ID']
- 
-bot = telegram.Bot(token)
+#디스코드 웹훅
+from discord import SyncWebhook
+discord_url = os.environ['Discord_Url']
+webhook = SyncWebhook.from_url(discord_url)
+
+# # 텔레그램봇
+# token = os.environ['TELEGRAM_TOKEN']
+# id = os.environ['TELEGRAM_ID']
+# bot = telegram.Bot(token)
+
 url = 'https://front.wemakeprice.com/api/wmpsuggest/hotkeyword/all.json'
 headers = {
             'Referer': 'ticket.melon.com',
@@ -28,8 +34,8 @@ for i in range(len(main_data)):
     #print(main_data[i]['rank'])
 
 def king() :
-    bot.sendMessage(chat_id=id, text=rank)
-    
+    webhook.send(rank)
+  
 schedule.every(10).seconds.do(king)
     
 # # step4.스캐쥴 시작
